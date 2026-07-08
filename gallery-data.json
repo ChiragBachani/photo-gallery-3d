@@ -1,0 +1,604 @@
+{
+ "photos": [
+  {
+   "file": "photos/000.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/001.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/002.jpg",
+   "w": 1280,
+   "h": 614,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/003.jpg",
+   "w": 1280,
+   "h": 801,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/004.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/005.jpg",
+   "w": 1280,
+   "h": 890,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/006.jpg",
+   "w": 1280,
+   "h": 1280,
+   "room": "recognized",
+   "section": null,
+   "caption": "Recognized Works"
+  },
+  {
+   "file": "photos/007.jpg",
+   "w": 1280,
+   "h": 614,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/008.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/009.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/010.jpg",
+   "w": 1280,
+   "h": 1280,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/011.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/012.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/013.jpg",
+   "w": 1280,
+   "h": 792,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/014.jpg",
+   "w": 960,
+   "h": 1280,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/015.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/016.jpg",
+   "w": 1280,
+   "h": 561,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/017.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/018.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "astro",
+   "section": null,
+   "caption": "Astrophotography"
+  },
+  {
+   "file": "photos/019.jpg",
+   "w": 1018,
+   "h": 1280,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/020.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/021.jpg",
+   "w": 1280,
+   "h": 684,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/022.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/023.jpg",
+   "w": 1280,
+   "h": 521,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/024.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/025.jpg",
+   "w": 1023,
+   "h": 1280,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/026.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/027.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/028.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/029.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/030.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "concerts",
+   "section": null,
+   "caption": "Concerts"
+  },
+  {
+   "file": "photos/031.jpg",
+   "w": 1280,
+   "h": 623,
+   "room": "travel",
+   "section": "New Zealand",
+   "caption": "New Zealand"
+  },
+  {
+   "file": "photos/032.jpg",
+   "w": 960,
+   "h": 1280,
+   "room": "travel",
+   "section": "New Zealand",
+   "caption": "New Zealand"
+  },
+  {
+   "file": "photos/033.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "travel",
+   "section": "New Zealand",
+   "caption": "New Zealand"
+  },
+  {
+   "file": "photos/034.jpg",
+   "w": 872,
+   "h": 1280,
+   "room": "travel",
+   "section": "New Zealand",
+   "caption": "New Zealand"
+  },
+  {
+   "file": "photos/035.jpg",
+   "w": 1280,
+   "h": 1067,
+   "room": "travel",
+   "section": "Australia",
+   "caption": "Australia"
+  },
+  {
+   "file": "photos/036.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Australia",
+   "caption": "Australia"
+  },
+  {
+   "file": "photos/037.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Australia",
+   "caption": "Australia"
+  },
+  {
+   "file": "photos/038.jpg",
+   "w": 820,
+   "h": 1280,
+   "room": "travel",
+   "section": "Australia",
+   "caption": "Australia"
+  },
+  {
+   "file": "photos/039.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Kenya",
+   "caption": "Kenya"
+  },
+  {
+   "file": "photos/040.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Kenya",
+   "caption": "Kenya"
+  },
+  {
+   "file": "photos/041.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Kenya",
+   "caption": "Kenya"
+  },
+  {
+   "file": "photos/042.jpg",
+   "w": 935,
+   "h": 1280,
+   "room": "travel",
+   "section": "Kenya",
+   "caption": "Kenya"
+  },
+  {
+   "file": "photos/043.jpg",
+   "w": 960,
+   "h": 1280,
+   "room": "travel",
+   "section": "Tanzania",
+   "caption": "Tanzania"
+  },
+  {
+   "file": "photos/044.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Tanzania",
+   "caption": "Tanzania"
+  },
+  {
+   "file": "photos/045.jpg",
+   "w": 1280,
+   "h": 1021,
+   "room": "travel",
+   "section": "Tanzania",
+   "caption": "Tanzania"
+  },
+  {
+   "file": "photos/046.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Tanzania",
+   "caption": "Tanzania"
+  },
+  {
+   "file": "photos/047.jpg",
+   "w": 1280,
+   "h": 763,
+   "room": "travel",
+   "section": "Israel",
+   "caption": "Israel"
+  },
+  {
+   "file": "photos/048.jpg",
+   "w": 1280,
+   "h": 801,
+   "room": "travel",
+   "section": "Israel",
+   "caption": "Israel"
+  },
+  {
+   "file": "photos/049.jpg",
+   "w": 967,
+   "h": 1280,
+   "room": "travel",
+   "section": "Israel",
+   "caption": "Israel"
+  },
+  {
+   "file": "photos/050.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Israel",
+   "caption": "Israel"
+  },
+  {
+   "file": "photos/051.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Jordan",
+   "caption": "Jordan"
+  },
+  {
+   "file": "photos/052.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Jordan",
+   "caption": "Jordan"
+  },
+  {
+   "file": "photos/053.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Jordan",
+   "caption": "Jordan"
+  },
+  {
+   "file": "photos/054.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "travel",
+   "section": "Jordan",
+   "caption": "Jordan"
+  },
+  {
+   "file": "photos/055.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/056.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/057.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/058.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/059.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/060.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/061.jpg",
+   "w": 854,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/062.jpg",
+   "w": 1280,
+   "h": 824,
+   "room": "portraits",
+   "section": "Headshots",
+   "caption": "Headshots"
+  },
+  {
+   "file": "photos/063.jpg",
+   "w": 911,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/064.jpg",
+   "w": 1280,
+   "h": 854,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/065.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/066.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/067.jpg",
+   "w": 1280,
+   "h": 853,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/068.jpg",
+   "w": 853,
+   "h": 1280,
+   "room": "portraits",
+   "section": "Senior Pictures",
+   "caption": "Senior Pictures"
+  },
+  {
+   "file": "photos/069.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  },
+  {
+   "file": "photos/070.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  },
+  {
+   "file": "photos/071.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  },
+  {
+   "file": "photos/072.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  },
+  {
+   "file": "photos/073.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  },
+  {
+   "file": "photos/074.jpg",
+   "w": 1280,
+   "h": 960,
+   "room": "culture",
+   "section": null,
+   "caption": "Indian Culture in America"
+  }
+ ]
+}

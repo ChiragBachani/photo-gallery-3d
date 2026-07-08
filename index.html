@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Chirag Bachani — 3D Photo Gallery</title>
+  <meta name="description" content="Walk through an interactive 3D gallery of award-winning photography by Chirag Bachani — astrophotography, concerts, travel, portraits and more." />
+  <style>
+    :root {
+      --gold: #d4af37;
+      --ink: #0b0b10;
+      --paper: #f4efe6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; overflow: hidden; background: var(--ink); }
+    body { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--paper); }
+    #app { position: fixed; inset: 0; touch-action: none; }
+    canvas { display: block; }
+
+    .overlay {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center;
+      background: radial-gradient(ellipse at 50% 40%, #14141f 0%, #07070c 75%);
+      z-index: 30; transition: opacity .6s ease; padding: 24px;
+    }
+    .overlay.hidden { opacity: 0; pointer-events: none; }
+
+    .brand { font-family: Georgia, "Times New Roman", serif; letter-spacing: .35em; font-weight: 400;
+      font-size: clamp(26px, 5vw, 46px); color: var(--paper); text-transform: uppercase; }
+    .brand em { color: var(--gold); font-style: normal; }
+    .sub { margin-top: 10px; letter-spacing: .5em; text-transform: uppercase; font-size: clamp(10px, 1.6vw, 13px); color: #9a93a8; }
+    .press { margin-top: 26px; font-size: clamp(10px, 1.5vw, 12px); letter-spacing: .18em; color: #7d7690; text-transform: uppercase; }
+    .press b { color: var(--gold); font-weight: 600; }
+
+    .bar-wrap { margin-top: 34px; width: min(340px, 70vw); height: 2px; background: #2a2836; }
+    .bar { height: 100%; width: 0%; background: var(--gold); transition: width .25s ease; }
+    .load-note { margin-top: 12px; font-size: 11px; letter-spacing: .25em; color: #6c6580; text-transform: uppercase; }
+
+    .btn-row { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .btn {
+      appearance: none; border: 1px solid var(--gold); background: transparent; color: var(--paper);
+      padding: 13px 26px; font-size: 13px; letter-spacing: .22em; text-transform: uppercase;
+      cursor: pointer; transition: background .2s, color .2s; font-family: inherit;
+    }
+    .btn:hover { background: var(--gold); color: #14100a; }
+    .btn.solid { background: var(--gold); color: #14100a; }
+    .btn.solid:hover { background: #e9c95c; }
+    .hint-line { margin-top: 26px; font-size: 12px; color: #8d86a0; line-height: 1.9; }
+    .hint-line kbd { border: 1px solid #464055; border-radius: 4px; padding: 1px 6px; font-size: 11px; color: #c9c3d8; font-family: inherit; }
+
+    /* HUD */
+    #hud { position: fixed; inset: 0; pointer-events: none; z-index: 20; }
+    #room-chip {
+      position: absolute; top: 18px; left: 50%; transform: translateX(-50%);
+      background: rgba(10,9,15,.62); border: 1px solid rgba(212,175,55,.45);
+      padding: 8px 20px; font-size: 12px; letter-spacing: .3em; text-transform: uppercase;
+      color: var(--paper); backdrop-filter: blur(6px); white-space: nowrap;
+      transition: opacity .4s;
+    }
+    #caption {
+      position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+      background: rgba(10,9,15,.7); border-left: 2px solid var(--gold);
+      padding: 10px 22px; font-size: 14px; letter-spacing: .06em; color: var(--paper);
+      backdrop-filter: blur(6px); opacity: 0; transition: opacity .35s; max-width: 86vw; text-align: center;
+    }
+    #caption .counter { display: block; margin-top: 3px; font-size: 11px; color: #9a93a8; letter-spacing: .2em; }
+    #hint {
+      position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+      font-size: 12px; letter-spacing: .12em; color: #b9b3c8; text-shadow: 0 1px 4px #000;
+      opacity: 0; transition: opacity .4s; text-align: center; max-width: 90vw; line-height: 1.8;
+    }
+    #tour-btn, #exit-tour-btn {
+      position: absolute; bottom: 22px; right: 18px; pointer-events: auto;
+      background: rgba(10,9,15,.62); border: 1px solid rgba(212,175,55,.55); color: var(--paper);
+      padding: 9px 18px; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; cursor: pointer;
+      backdrop-filter: blur(6px); font-family: inherit;
+    }
+    #tour-btn:hover, #exit-tour-btn:hover { background: rgba(212,175,55,.85); color: #14100a; }
+    #crosshair {
+      position: absolute; top: 50%; left: 50%; width: 5px; height: 5px; border-radius: 50%;
+      transform: translate(-50%, -50%); background: rgba(244,239,230,.85); box-shadow: 0 0 6px rgba(0,0,0,.8);
+      opacity: 0; transition: opacity .3s;
+    }
+
+    /* joystick (mobile) */
+    #joystick { position: absolute; bottom: 34px; left: 30px; width: 112px; height: 112px; border-radius: 50%;
+      border: 1.5px solid rgba(244,239,230,.35); background: rgba(20,18,28,.35); pointer-events: auto; display: none; }
+    #joy-thumb { position: absolute; top: 50%; left: 50%; width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(212,175,55,.75); transform: translate(-50%, -50%); }
+
+    /* CTA overlay */
+    #cta.overlay { background: rgba(6,6,10,.88); backdrop-filter: blur(8px); }
+    #cta h2 { font-family: Georgia, serif; font-size: clamp(26px, 4.6vw, 40px); letter-spacing: .1em; font-weight: 400; }
+    #cta p { margin-top: 14px; color: #b0aac0; font-size: 15px; letter-spacing: .05em; max-width: 520px; line-height: 1.7; }
+    #cta .btn-row { margin-top: 30px; }
+    #cta a.btn { text-decoration: none; display: inline-block; }
+    .cta-close { margin-top: 26px; background: none; border: none; color: #8d86a0; font-size: 12px;
+      letter-spacing: .2em; text-transform: uppercase; cursor: pointer; border-bottom: 1px solid #464055; padding-bottom: 3px; font-family: inherit; }
+    .cta-close:hover { color: var(--paper); }
+  </style>
+  <script type="module" crossorigin src="./assets/index-BDu_dvJO.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+
+  <div id="hud">
+    <div id="room-chip">Entrance</div>
+    <div id="caption"><span class="text"></span><span class="counter"></span></div>
+    <div id="hint"></div>
+    <button id="tour-btn" style="display:none">▶ &nbsp;Take the Tour</button>
+    <button id="exit-tour-btn" style="display:none">✕ &nbsp;Exit Tour</button>
+    <div id="crosshair"></div>
+    <div id="joystick"><div id="joy-thumb"></div></div>
+  </div>
+
+  <div id="loading" class="overlay">
+    <div class="brand">Chirag <em>Bachani</em></div>
+    <div class="sub">A Walkable Photo Gallery</div>
+    <div class="bar-wrap"><div class="bar" id="load-bar"></div></div>
+    <div class="load-note" id="load-note">Hanging the photographs…</div>
+  </div>
+
+  <div id="start" class="overlay hidden">
+    <div class="brand">Chirag <em>Bachani</em></div>
+    <div class="sub">Photography · A 3D Gallery</div>
+    <div class="press">As featured by <b>NASA</b> · <b>BBC</b> · <b>Sky &amp; Telescope</b> · <b>EarthSky</b></div>
+    <div class="btn-row">
+      <button class="btn solid" id="start-tour">▶ &nbsp;Take the Tour</button>
+      <button class="btn" id="start-explore">Explore Freely</button>
+    </div>
+    <div class="hint-line" id="start-hint">
+      <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrows to walk · move mouse to look · <kbd>Shift</kbd> to stride · click a photo to view it up close
+    </div>
+  </div>
+
+  <div id="cta" class="overlay hidden">
+    <div class="brand" style="font-size:clamp(18px,3vw,26px)">Chirag <em>Bachani</em></div>
+    <h2>Like what you see?</h2>
+    <p>Concerts, headshots, senior pictures, events, astrophotography workshops — let's create something worth framing.</p>
+    <div class="btn-row">
+      <a class="btn solid" href="mailto:chiragbachaniphotography@gmail.com?subject=Photography%20inquiry">✉ &nbsp;Book a Session</a>
+      <a class="btn" href="https://www.instagram.com/chiragbphoto" target="_blank" rel="noopener">Instagram · @chiragbphoto</a>
+    </div>
+    <button class="cta-close" id="cta-close">← Keep exploring the gallery</button>
+  </div>
+
+</body>
+</html>
