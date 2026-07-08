@@ -1,7 +1,7 @@
 # 3D Photo Gallery Walkthrough — Project Context
 
 ## What this is
-A standalone 3D walkable museum of Chirag Bachani's photography (chiragbachaniphotography.com), built Jul 8 2026 to be fun to share and enticing to potential clients. Three.js + Vite, plain JS, no backend. Status: **built and verified locally, not yet deployed**. Next step when asked: deploy as a static site (possibly Cloudflare Pages alongside the portfolio site, e.g. gallery.chiragbachaniphotography.com).
+A standalone 3D walkable museum of Chirag Bachani's photography (chiragbachaniphotography.com), built Jul 8 2026 to be fun to share and enticing to potential clients. Three.js + Vite, plain JS, no backend. Status: **LIVE at https://chiragbachani.github.io/photo-gallery-3d/** (GitHub Pages; repo `ChiragBachani/photo-gallery-3d`, source on `main`, built site force-pushed to `gh-pages`). To redeploy: `npm run build`, then push `dist/` contents to `gh-pages`. `vite.config.js` sets `base: './'` for the /photo-gallery-3d/ subpath — keep it. Later option: alias gallery.chiragbachaniphotography.com once the domain's DNS moves to Cloudflare.
 
 The user has no coding background — explain everything in plain English.
 
